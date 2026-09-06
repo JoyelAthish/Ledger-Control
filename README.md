@@ -6,6 +6,7 @@ Ledger Control automates that entire loop. It reconciles a batch of orders acros
 
 ## Setup
 Both options requires Python and Node.js to already be installed on your machine.
+
 OPTION-A(Manual setup)
 
 ```bash
@@ -15,6 +16,7 @@ cp ../.env.example ../.env   # then edit .env with your OWN new Gemini key
 uvicorn main:app --reload --port 8000
 ```
 Open http://localhost:8000/docs to try every endpoint interactively.
+
 
 Option-B —(One-click start)
 
