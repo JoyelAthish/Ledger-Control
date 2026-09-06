@@ -5,15 +5,29 @@ Every order your business processes leaves three separate trails: the store ledg
 Ledger Control automates that entire loop. It reconciles a batch of orders across all three sources in a single deterministic pass, classifies every mismatch by type and risk level, and surfaces a live dashboard showing exactly where money is stuck and why — down to the individual order. For every high-risk exception, an AI agent drafts a ready-to-send root-cause diagnosis and vendor dispute email, so review time turns into minutes instead of hours.
 
 ## Setup
-
+Both options requires Python and Node.js to already be installed on your machine.
+OPTION-A(Manual setup)
 ```bash
 cd backend
 pip install -r requirements.txt
 cp ../.env.example ../.env   # then edit .env with your OWN new Gemini key
 uvicorn main:app --reload --port 8000
 ```
-
 Open http://localhost:8000/docs to try every endpoint interactively.
+
+Option-B —(One-click start)
+Just double-click start.bat in the project root. It's fully self-setting-up — no manual pip install or npm install needed, even on a completely fresh clone. It will automatically:
+
+Create the Python virtual environment if it doesn't exist yet
+Install all backend dependencies (requirements.txt)
+Create .env from .env.example if missing, and open it in Notepad so you can paste in your own Gemini API key (this one step can't be automated — it has to be your own key, not one shipped in the repo)
+Install all frontend dependencies (npm install) if node_modules doesn't exist yet
+Start the backend and frontend servers, and open the app in your browser
+
+First run only: if .env didn't exist yet, the script will pause after creating it so you can add your key — save the file, close Notepad, then double-click start.bat again to finish setup and launch.
+
+Every run after that: just double-click it — it detects everything is already installed and skips straight to launching both servers and opening your browser at http://localhost:5173.
+
 
 ## Frontend
 
