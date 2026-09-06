@@ -1,9 +1,8 @@
-# Autonomous Finance Controller
+# Ledger Control — AI Finance Controller
 
-Migrated from the original Streamlit `app.py` to FastAPI. Business logic
-(reconciliation classification rules, AI prompt/cache behavior) is preserved
-from the original `reconcile.py` / `agent.py` / `app.py` — only the delivery
-layer changed.
+Every order your business processes leaves three separate trails: the store ledger says a sale happened, the payment gateway says money was captured, and the bank says money landed in the account. These three records almost never agree perfectly — dropped webhooks, fee-tier misconfigurations, settlement shortfalls, and orphaned credits quietly pile up, and today most finance teams find them by hand, in spreadsheets, after the money is already gone.
+
+Ledger Control automates that entire loop. It reconciles a batch of orders across all three sources in a single deterministic pass, classifies every mismatch by type and risk level, and surfaces a live dashboard showing exactly where money is stuck and why — down to the individual order. For every high-risk exception, an AI agent drafts a ready-to-send root-cause diagnosis and vendor dispute email, so review time turns into minutes instead of hours.
 
 ## Setup
 
