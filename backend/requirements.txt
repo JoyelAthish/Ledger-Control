@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+pandas
+pydantic>=2
+google-genai
+python-dotenv

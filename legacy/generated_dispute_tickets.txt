@@ -1,0 +1,150 @@
+
+----------------------------------------------------------------------
+EXCEPTION #1 | ISSUE: FEE_OVERCHARGE_ANOMALY | ORDER: ORD-2026-00004 | AMOUNT: ₹158.7
+----------------------------------------------------------------------
+### Financial Root-Cause Diagnosis
+
+The transaction for Order ID **ORD-2026-00004** was incorrectly billed under an uncontracted fee tier, applying an inflated Merchant Discount Rate (MDR) of 3.5% rather than our contracted 2.0% rate. This classification error resulted in an unauthorized fee deduction of ₹370.29, creating a direct overcharge anomaly of ₹158.70.
+
+***
+
+### Formal Vendor Dispute Email
+
+**Subject:** Billing Dispute: MDR Overcharge Anomaly – Order ID: ORD-2026-00004
+
+Dear Razorpay Support Team,
+
+I am writing to formally dispute an incorrect fee deduction on transaction **ORD-2026-00004** (Customer: Aarav Joshi).
+
+Per our active merchant agreement, our assigned Merchant Discount Rate (MDR) is **2.0%** (expected fee: **₹211.59**). However, Razorpay assessed a fee of **3.5%** (**₹370.29**), creating an excess charge of **₹158.70**.
+
+**Summary of Discrepancy:**
+* **Contracted Fee (2.0%):** ₹211.59
+* **Billed Fee (3.5%):** ₹370.29
+* **Disputed Overcharge Amount:** ₹158.70
+
+Please investigate this tier misconfiguration, credit **₹158.70** back to our settlement account, and update your system mapping to prevent recurring pricing anomalies. 
+
+We appreciate your prompt assistance in rectifying this matter.
+
+Sincerely,  
+**FinOps & Treasury Team**  
+*Finance Controller Desk*
+        
+----------------------------------------------------------------------
+EXCEPTION #2 | ISSUE: MISSING_GATEWAY_PAYOUT | ORDER: ORD-2026-00012 | AMOUNT: ₹3645.31
+----------------------------------------------------------------------
+### 1. Financial Root-Cause Diagnosis
+The discrepancy is caused by a settlement drop or missing webhook integration between the payment gateway and our ledger, where the customer's payment was authorized and captured but failed to route into the batch payout pipeline. Consequently, this has created an un-reconciled cash flow gap of ₹3,645.31, leaving the recognized revenue unsettled in our bank account.
+
+***
+
+### 2. Vendor Dispute Email
+
+**Subject:** Urgent: Missing Payout Settlement – Order #ORD-2026-00012 (₹3,645.31)
+
+Dear Razorpay Support Team,
+
+During our daily financial reconciliation, we flagged a missing payout for transaction **ORD-2026-00012** (Customer: **Sneha Menon**) amounting to **₹3,645.31**.
+
+While our internal store ledger confirms a successful payment capture, there is no corresponding settlement record or transaction reference in our Razorpay merchant payout dashboard. 
+
+Please investigate this transaction on priority, share the associated Gateway Payment ID (`pay_xxxxxxxx`), and credit the un-settled amount of ₹3,645.31 to our registered bank account. 
+
+If this transaction failed at the acquiring bank end, kindly provide the error log and refund status so we can update our records.
+
+Sincerely,  
+**Finance Operations Team**  
+*FinOps & Treasury Desk*
+        
+----------------------------------------------------------------------
+EXCEPTION #3 | ISSUE: BANK_DEPOSIT_SHORTFALL | ORDER: ORD-2026-00023 | AMOUNT: ₹98.02
+----------------------------------------------------------------------
+### Financial Root-Cause Diagnosis
+
+A ₹98.02 shortfall occurred because the actual bank deposit credited (₹2,418.36) fell below Razorpay's stated net payout amount (₹2,516.38) for Order ID ORD-2026-00023. This discrepancy is likely driven by unannounced acquiring bank lifting/processing charges, unexpected tax withholdings, or a settlement batching error during transfer to the bank.
+
+---
+
+### Vendor Dispute Email
+
+**Subject:** Settlement Discrepancy Notice: Bank Shortfall of ₹98.02 – Order #ORD-2026-00023
+
+Dear Razorpay Support & Merchant Operations Team,
+
+We identified a payout discrepancy of **₹98.02** during our daily financial reconciliation for Order **ORD-2026-00023** (Customer: Ananya Pillai). 
+
+According to your net payout advice, **₹2,516.38** was marked for transfer. However, our linked bank account received only **₹2,418.36**.
+
+**Discrepancy Summary:**
+* **Order ID:** ORD-2026-00023
+* **Razorpay Net Payout Advice:** ₹2,516.38
+* **Actual Bank Deposit:** ₹2,418.36
+* **Unresolved Shortfall:** ₹98.02
+
+Please review this transaction with your acquiring bank to identify the cause of this unadjusted variance (e.g., unexpected bank fees or processing errors) and initiate a reimbursement for the **₹98.02** shortfall immediately.
+
+We request a prompt update with the trace details and resolution.
+
+Best regards,
+
+**FinOps & Reconciliations Team**  
+*Finance & Treasury Control Department*
+        
+----------------------------------------------------------------------
+EXCEPTION #4 | ISSUE: FEE_OVERCHARGE_ANOMALY | ORDER: ORD-2026-00033 | AMOUNT: ₹18.36
+----------------------------------------------------------------------
+### **1. Financial Root-Cause Diagnosis**
+An incorrect Merchant Discount Rate (MDR) of 3.5% was applied to transaction ORD-2026-00033 instead of our contracted rate of 2.0%. This pricing tier misclassification resulted in a financial variance and fee overcharge of ₹18.36 (billed ₹42.85 vs. contracted ₹24.49).
+
+---
+
+### **2. Vendor Dispute Email**
+
+**Subject:** Dispute: MDR Fee Overcharge – Order ID: ORD-2026-00033
+
+Dear Razorpay Merchant Support Team,
+
+I am writing to lodge a formal dispute regarding a transaction fee overcharge on Order ID **ORD-2026-00033** (Customer: Rohan Verma).
+
+Per our active Merchant Agreement, our agreed MDR rate is **2.0%** (expected fee: **₹24.49**). However, Razorpay processed a deduction at **3.5%** (billed fee: **₹42.85**), resulting in an erroneous overcharge of **₹18.36**.
+
+Please review this transaction, correct the system pricing logic for our account, and process a credit note/refund of **₹18.36** to our settlement balance. 
+
+Kindly acknowledge receipt of this email and provide the ticket reference ID for tracking.
+
+Best regards,
+
+**FinOps & Finance Control Team**  
+*Finance & Operations Department*  
+[Your Company Name]
+        
+----------------------------------------------------------------------
+EXCEPTION #5 | ISSUE: FEE_OVERCHARGE_ANOMALY | ORDER: ORD-2026-00039 | AMOUNT: ₹53.82
+----------------------------------------------------------------------
+### 1. Financial Root-Cause Diagnosis
+An incorrect Merchant Discount Rate (MDR) of 3.5% was misapplied to transaction ORD-2026-00039 instead of our contracted rate of 2.0%. This pricing tier misclassification led to a direct fee overcharge anomaly of ₹53.82 on the settlement.
+
+---
+
+### 2. Vendor Dispute Email
+
+**Subject:** Dispute: MDR Fee Overcharge Anomaly – Order ID: ORD-2026-00039
+
+Dear Razorpay Merchant Support Team,
+
+I am writing from our Finance Operations team regarding an MDR fee overcharge identified during our automated audit for **Order ID: ORD-2026-00039** (Customer: Aarav Verma).
+
+According to our merchant agreement, the contracted processing fee for this transaction category is **2.0% (₹71.77)**. However, a rate of **3.5% (₹125.59)** was levied, resulting in an unauthorized discrepancy of **₹53.82**.
+
+**Discrepancy Summary:**
+- **Charged Fee:** ₹125.59 (3.5%)
+- **Contracted Fee:** ₹71.77 (2.0%)
+- **Refund Claimed:** ₹53.82
+
+Please review this transaction, correct the underlying fee tier misclassification in your system, and process a credit note/adjustment of **₹53.82** to our merchant account. Kindly provide the refund reference number upon resolution.
+
+Sincerely,  
+**FinOps Team**  
+*Finance Controller Division*
+        

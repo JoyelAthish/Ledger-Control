@@ -1,0 +1,26 @@
+﻿# Secrets - NEVER commit these
+.env
+*.env
+!.env.example
+
+# Python
+myenv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
