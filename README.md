@@ -7,6 +7,7 @@ Ledger Control automates that entire loop. It reconciles a batch of orders acros
 ## Setup
 Both options requires Python and Node.js to already be installed on your machine.
 OPTION-A(Manual setup)
+
 ```bash
 cd backend
 pip install -r requirements.txt
@@ -16,6 +17,7 @@ uvicorn main:app --reload --port 8000
 Open http://localhost:8000/docs to try every endpoint interactively.
 
 Option-B —(One-click start)
+
 Just double-click start.bat in the project root. It's fully self-setting-up — no manual pip install or npm install needed, even on a completely fresh clone. It will automatically:
 
 Create the Python virtual environment if it doesn't exist yet
